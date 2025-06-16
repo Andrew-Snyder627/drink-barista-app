@@ -1,0 +1,96 @@
+{
+  "store_info": [
+    {
+      "id": 1,
+      "name": "The Daily Brew & Co.",
+      "description": "Your barista-style spot for coffee, tea, lemonades & energy drinks",
+      "phone_number": "555-0123"
+    }
+  ],
+  "drinks": [
+    {
+      "id": 1,
+      "name": "Vanilla Bean Latte",
+      "description": "Creamy espresso latte with pure vanilla bean syrup",
+      "origin": "Colombia",
+      "price": 4.5
+    },
+    {
+      "id": 2,
+      "name": "House Blend Drip",
+      "description": "Medium roast drip coffee, balanced and smooth",
+      "origin": "Brazil",
+      "price": 3.0
+    },
+    {
+      "id": 3,
+      "name": "Cold Brew",
+      "description": "Slow-steeped cold brew, rich and bold",
+      "origin": "Ethiopia",
+      "price": 4.0
+    },
+    {
+      "id": 4,
+      "name": "Matcha Latte",
+      "description": "Frothed milk with ceremonial grade matcha green tea",
+      "origin": "Japan",
+      "price": 5.0
+    },
+    {
+      "id": 5,
+      "name": "Chamomile Tea",
+      "description": "Calming herbal tea with floral notes",
+      "origin": "Egypt",
+      "price": 3.25
+    },
+    {
+      "id": 6,
+      "name": "Earl Grey",
+      "description": "Black tea scented with bergamot oil",
+      "origin": "China",
+      "price": 3.25
+    },
+    {
+      "id": 7,
+      "name": "Strawberry Lemonade",
+      "description": "Fresh-squeezed lemonade blended with ripe strawberries",
+      "origin": "Florida",
+      "price": 3.75
+    },
+    {
+      "id": 8,
+      "name": "Mango Mint Lemonade",
+      "description": "Sweet mango puree, mint, and tart lemon juice",
+      "origin": "Mexico",
+      "price": 4.0
+    },
+    {
+      "id": 9,
+      "name": "Citrus Energy",
+      "description": "Sparkling citrus blend with a caffeine boost",
+      "origin": "USA",
+      "price": 2.75
+    },
+    {
+      "id": 10,
+      "name": "Berry Blast Energy",
+      "description": "Mixed berry flavor energy drink, lightly carbonated",
+      "origin": "USA",
+      "price": 2.75
+    },
+    {
+      "id": 11,
+      "name": "Iced Mocha",
+      "description": "Cold espresso with chocolate syrup and milk",
+      "origin": "Colombia",
+      "price": 4.75
+    },
+    {
+      "id": 12,
+      "name": "Honey Ginger Tea",
+      "description": "Warm herbal infusion with honey and fresh ginger",
+      "origin": "India",
+      "price": 3.5
+    }
+  ]
+}
