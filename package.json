@@ -8,7 +8,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch db.json --port 4000"
+    "server": "json-server --watch db.json --port 4000",
+    "test": "vitest"
+  },
+  "vitest": {
+    "environment": "jsdom"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -31,6 +35,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "jsdom": "^26.1.0",
     "vite": "^6.3.5",
     "vitest": "^3.2.3"
   }
