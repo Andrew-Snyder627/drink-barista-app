@@ -1,12 +1,11 @@
 .container {
   display: flex;
-  align-items: flex-start;
-  padding: 1rem;
+  gap: 1.5rem;
+  margin: 1rem 0;
 }
 
 .sidebar {
   width: 240px;
-  margin-right: 1rem;
 }
 
 .main {
@@ -16,5 +15,5 @@
 .message {
   padding: 2rem;
   text-align: center;
-  font-size: 1.1rem;
+  color: var(--color-text);
 }

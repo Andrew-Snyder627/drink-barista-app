@@ -8,11 +8,13 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<StoreBanner />} />
-        <Route path="/shop" element={<ShopPage />} />
-        <Route path="/admin" element={<AdminPortal />} />
-      </Routes>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<StoreBanner />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/admin" element={<AdminPortal />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
