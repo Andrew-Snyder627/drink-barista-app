@@ -5,6 +5,9 @@ import TextInput from "../TextInput/TextInput";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import styles from "./ProductForm.module.css";
 
+// ProductForm handles creation of a new drink
+// Validates inputs and displays success/error messages
+
 function ProductForm() {
   const [fields, handleChange, resetFields] = useFormFields({
     name: "",

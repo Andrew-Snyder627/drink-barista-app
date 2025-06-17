@@ -4,6 +4,9 @@ import FilterSidebar from "../FilterSidebar/FilterSidebar";
 import ProductGrid from "../ProductGrid/ProductGrid";
 import styles from "./ShopPage.module.css";
 
+// ShopPage displays a list of drinks fetched from teh API
+// Includes a search filter via FliterSidebar
+
 function ShopPage() {
   const {
     data: drinksData,

@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./ProductCard.module.css";
 
+// ProductCard displays the details of a single drink
+
 function ProductCard({ drink }) {
   const { name, description, origin, price } = drink;
 

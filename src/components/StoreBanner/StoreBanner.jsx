@@ -2,6 +2,9 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import styles from "./StoreBanner.module.css";
 
+// StoreBanner fetches and displays the store_info (name, description, phone number)
+// Shows loading and error states accordingly
+
 function StoreBanner() {
   // Fetch the single store_info entry (id = 1)
   const {

@@ -5,6 +5,10 @@ import TextInput from "../TextInput/TextInput";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import styles from "./EditDrinkForm.module.css";
 
+// EditDrinkForm loads an existing drink ID
+// Also allows edits and calls updateDrink on submit
+// Props include the drink ID to edit & the onUpdated function (callback after successful update)
+
 function EditDrinkForm({ id, onUpdated }) {
   const {
     data: drink,

@@ -1,13 +1,13 @@
 const BASE_URL = "http://localhost:4000/drinks";
 
-/** GET all drinks (you already fetch these in ShopPage) */
+// GET all drinks
 export async function fetchDrinks() {
   const res = await fetch(BASE_URL);
   if (!res.ok) throw new Error(`Fetch drinks failed: ${res.status}`);
   return res.json();
 }
 
-/** POST a new drink */
+// POST a new drink
 export async function createDrink(drink) {
   const res = await fetch(BASE_URL, {
     method: "POST",
@@ -18,7 +18,7 @@ export async function createDrink(drink) {
   return res.json();
 }
 
-/** PATCH an existing drink (for later update functionality) */
+// PATCH an existing drink
 export async function updateDrink(id, updates) {
   const res = await fetch(`${BASE_URL}/${id}`, {
     method: "PATCH",

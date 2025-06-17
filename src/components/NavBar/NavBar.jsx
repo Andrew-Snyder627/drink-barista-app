@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
 
+// NavBar component renders the top level navigation links
+// Highlights the active route via CSS Module
 function NavBar() {
   return (
     <nav className={styles.navbar}>

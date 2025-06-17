@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+// Custom hook to fetch JSON data from a given URL
+// Manages loading, data & error state
+
 function useFetch(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -34,7 +37,7 @@ function useFetch(url) {
     return () => {
       isMounted = false;
     };
-  }, [url]);
+  }, [url]); // Re-run if URL changes
 
   return { data, loading, error };
 }

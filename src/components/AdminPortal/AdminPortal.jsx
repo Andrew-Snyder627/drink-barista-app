@@ -4,6 +4,10 @@ import ProductForm from "../ProductForm/ProductForm";
 import EditDrinkForm from "../EditDrinkForm/EditDrinkForm";
 import styles from "./AdminPortal.module.css";
 
+// AdminPortal renders two sections
+// First is the ProductForm for creating new drinks
+// Second is the dropdown/EditDrinkForm to update existing drinks
+
 function AdminPortal() {
   // Fetch all drinks so you can pick one to edit
   const {
