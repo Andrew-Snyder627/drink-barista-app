@@ -163,4 +163,4 @@ src/
 
 ### Admin Portal
 
-![Admin Portal Screenshot](./src/assets/admin-page.png)
+![Admin Portal Screenshot](./src/assets/new-admin-page.png)
