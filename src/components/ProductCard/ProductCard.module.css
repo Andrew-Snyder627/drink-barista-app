@@ -1,0 +1,22 @@
+.card {
+  background-color: #f0f9f0; /* soft green */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.origin,
+.price {
+  font-size: 0.8rem;
+  margin: 0.25rem 0;
+}

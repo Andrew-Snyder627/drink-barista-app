@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.sidebar {
+  width: 240px;
+  margin-right: 1rem;
+}
+
+.main {
+  flex: 1;
+}
+
+.message {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
