@@ -1,3 +1,6 @@
 .sidebar {
-  /* add a little background or padding here later */
+  padding: 1rem;
+  background-color: var(--color-accent);
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
