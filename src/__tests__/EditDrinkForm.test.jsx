@@ -35,6 +35,8 @@ describe("EditDrinkForm", () => {
       ...mockDrink,
       name: "Updated Latte",
     });
+    // Spy on deleteDrink also
+    vi.spyOn(api, "deleteDrink").mockResolvedValue({});
   });
 
   afterEach(() => {
@@ -96,6 +98,24 @@ describe("EditDrinkForm", () => {
     // Finally, check for the success message
     expect(
       await screen.findByText(/Drink updated successfully!/i)
+    ).toBeInTheDocument();
+  });
+
+  it("calls deleteDrink and shows delete success message", async () => {
+    render(<EditDrinkForm id={mockDrink.id} onUpdated={onUpdatedMock} />);
+    await screen.findByRole("heading", {
+      level: 3,
+      name: /Edit “Test Latte”/i,
+    });
+
+    fireEvent.click(screen.getByRole("button", { name: /Delete Drink/i }));
+
+    await waitFor(() => {
+      expect(api.deleteDrink).toHaveBeenCalledWith("1");
+    });
+    expect(onUpdatedMock).toHaveBeenCalled();
+    expect(
+      await screen.findByText(/Drink deleted successfully!/i)
     ).toBeInTheDocument();
   });
 });

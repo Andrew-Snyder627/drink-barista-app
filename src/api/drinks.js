@@ -28,3 +28,12 @@ export async function updateDrink(id, updates) {
   if (!res.ok) throw new Error(`Update drink ${id} failed: ${res.status}`);
   return res.json();
 }
+
+// DELETE an existing drink
+export async function deleteDrink(id) {
+  const res = await fetch(`${BASE_URL}/${id}`, {
+    method: "DELETE",
+  });
+  if (!res.ok) throw new Error(`Delete drink ${id} failed: ${res.status}`);
+  return res.json();
+}

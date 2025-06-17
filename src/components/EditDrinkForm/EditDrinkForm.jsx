@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
-import { updateDrink } from "../../api/drinks";
+import { deleteDrink, updateDrink } from "../../api/drinks";
 import TextInput from "../TextInput/TextInput";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import styles from "./EditDrinkForm.module.css";
@@ -66,6 +66,17 @@ function EditDrinkForm({ id, onUpdated }) {
     }
   }
 
+  async function handleDelete() {
+    setMessage("");
+    try {
+      await deleteDrink(id);
+      setMessage("Drink deleted successfully!");
+      onUpdated();
+    } catch (err) {
+      setMessage(`Error: ${err.message}`);
+    }
+  }
+
   if (loading) return <p>Loading drink…</p>;
   if (error) return <p className={styles.error}>Error: {error}</p>;
 
@@ -109,6 +120,13 @@ function EditDrinkForm({ id, onUpdated }) {
       )}
 
       <SubmitButton>Update Drink</SubmitButton>
+      <button
+        type="button"
+        className={styles.deleteButton}
+        onClick={handleDelete}
+      >
+        Delete Drink
+      </button>
     </form>
   );
 }
