@@ -151,27 +151,6 @@ src/
   1. **Ensuring spy on deleteDrink:** use `vi.spyOn(api, 'deleteDrink')` in `beforeEach` so the function is a spy.
   2. **Waiting for callback:** wrap `expect(api.deleteDrink).toHaveBeenCalledWith(...)` in `await waitFor()` to catch the async call.
 
-## Testing Challenges & Solutions
-
-1. **Hanging on real HTTP calls**
-
-   - **Challenge:** `useFetch` issues a real `fetch()` that never resolves in tests.
-   - **Solution:** Stub `global.fetch` in tests to return mock JSON for specific endpoints.
-
-2. **Immutable module exports**
-
-   - **Challenge:** Directly reassigning `api.updateDrink` caused “only a getter” errors.
-   - **Solution:** Use `vi.spyOn(api, 'updateDrink')` to mock the function without reassigning the export.
-
-3. **Hook-mock ordering**
-
-   - **Challenge:** Mocking the hook after importing the component meant the real hook ran first and tests hung on “Loading.”
-   - **Solution:** Hoist `vi.mock('../hooks/useFetch')` (or `vi.spyOn(fetchHook, 'default')`) to the top of test files, before component imports.
-
-4. **Asynchronous state updates**
-   - **Challenge:** Asserting input values immediately sometimes occurred before React state settled.
-   - **Solution:** Use RTL’s `findBy…` queries and `waitFor()` to await DOM updates before assertions.
-
 ## Screenshots
 
 ### Home Page
